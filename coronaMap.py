@@ -6,10 +6,6 @@ from branca.element import IFrame
 class CoronaMap:
 
     mapCorona = folium.Map(location=[21.389082, 39.857910],zoom_start=3)
-
-
-
-
     def addToMap(self,countryName,lat,long,searchResult=[]):
         articleListHtml = self.ulify(searchResult)
 

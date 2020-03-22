@@ -2,15 +2,17 @@ import timeit
 import googleSearch
 import coronaMap
 import pandas as pd
+import coro
 
 googleSearch = googleSearch.GoogleSearch()
-coronaMap = coronaMap.CoronaMap();
+coronaMap = coronaMap.CoronaMap()
 
 countryLatLongMap = {}
 with open("countryLatLong.txt") as f:
     for line in f:
        (key, val) = line.split(":")
        countryLatLongMap[key] = val
+
 
 data = pd.read_csv("covid_19_data.csv")
 pd.set_option('display.max_rows', None)
