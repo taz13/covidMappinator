@@ -2,12 +2,15 @@ Afghanistan:AF
 Albania:AL
 Algeria:DZ
 Angola:AO
+Antigua and Barbuda:ANB
 Argentina:AR
 Armenia:AM
+Aruba:ARUBA
 Australia:AU
 Austria:AT
 Azerbaijan:AZ
 Bahamas:BS
+Bahrain:BAH
 Bangladesh:BD
 Belarus:BY
 Belgium:BE
@@ -24,6 +27,7 @@ Burkina Faso:BF
 Burundi:BI
 Cambodia:KH
 Cameroon:CM
+Cayman Islands:CAYI
 Canada:CA
 Central African Republic:CF
 Chad:TD
@@ -34,6 +38,7 @@ Congo:CG
 Costa Rica:CR
 Croatia:HR
 Cuba:CU
+Curacao:CUR
 Cyprus:CY
 Czech Republic:CZ
 Democratic Republic of Congo:CD
@@ -41,7 +46,6 @@ Denmark:DK
 Diamond Princess:DP
 Djibouti:DJ
 Dominican Republic:DO
-DR Congo:CD
 Ecuador:EC
 Egypt:EG
 El Salvador:SV
@@ -50,6 +54,7 @@ Eritrea:ER
 Estonia:EE
 Ethiopia:ET
 Falkland Islands:FK
+Faroe Islands:FAR
 Fiji:FJ
 Finland:FI
 France:FR
@@ -60,9 +65,12 @@ Gambia:GM
 Georgia:GE
 Germany:DE
 Ghana:GH
+Gibraltar:GIB
 Greece:GR
 Greenland:GL
+Guadeloupe:GUAD
 Guatemala:GT
+Guernsey:GUER
 Guinea:GN
 Guinea-Bissau:GW
 Guyana:GY
@@ -81,27 +89,32 @@ Italy:IT
 Ivory Coast:CI
 Jamaica:JM
 Japan:JP
+Jersey:JER
 Jordan:JO
 Kazakhstan:KZ
 Kenya:KE
-Korea:KP
 Kosovo:XK
 Kuwait:KW
 Kyrgyzstan:KG
-Lao:LA
+Laos:LA
 Latvia:LV
 Lebanon:LB
 Lesotho:LS
 Liberia:LR
 Libya:LY
+Liechtenstein:LIECH
 Lithuania:LT
 Luxembourg:LU
+Macau:MAC
 Macedonia:MK
 Madagascar:MG
 Malawi:MW
 Malaysia:MY
+Maldives:MALD
 Mali:ML
+Malta:MAL
 Mauritania:MR
+Martinique:MART
 Mexico:MX
 Moldova:MD
 Mongolia:MN
@@ -132,12 +145,18 @@ Portugal:PT
 Puerto Rico:PR
 Qatar:QA
 Republic of Kosovo:XK
+Reunion:REU
 Romania:RO
 Russia:RU
 Rwanda:RW
+Saint Barthelemy:SAB
+Saint Lucia:SAL
+Saint Vincent and the Grenadines:SVG
+San Marino:SAM
 Saudi Arabia:SA
 Senegal:SN
 Serbia:RS
+Seychelles:SEY
 Sierra Leone:SL
 Singapore:SG
 Slovakia:SK
@@ -174,6 +193,7 @@ Uruguay:UY
 USA:US
 Uzbekistan:UZ
 Vanuatu:VU
+Vatican City:VAT
 Venezuela:VE
 Vietnam:VN
 Western Sahara:EH
