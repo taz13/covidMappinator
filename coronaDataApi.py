@@ -4,7 +4,8 @@ import requests
 
 
 class CoronaApi:
-    coronaApiUrlFormat = "https://thevirustracker.com/free-api?countryTotal={}"
+    coronaApiUrl = "https://api.thevirustracker.com/free-api?countryTotals=ALL"
+    countryCovidDict = {}
 
     UAS = ("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1",
            "Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0",
@@ -14,22 +15,30 @@ class CoronaApi:
            "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36",
            )
 
-    def getCountryResult(self, countryCode):
+    def __init__(self):
         ua = self.UAS[random.randrange(len(self.UAS))]
 
-        coronaData = [0, 0, 0]
-        apiUrl = self.coronaApiUrlFormat.format(countryCode)
-        respone = requests.get(apiUrl, headers={'Accept-Encoding': 'identity', 'user-agent': ua})
+        respone = requests.get(self.coronaApiUrl, headers={'Accept-Encoding': 'identity', 'user-agent': ua})
         print("status  code: " + str(respone.status_code))
         try:
+
             jsonResponse = respone.json()
-            countryDataKey = 'countrydata'
+            countryDataKey = 'countryitems'
             if countryDataKey in jsonResponse.keys():
-                coronaData[0] = jsonResponse[countryDataKey][0]['total_cases']
-                coronaData[1] = jsonResponse[countryDataKey][0]['total_deaths']
-                coronaData[2] = jsonResponse[countryDataKey][0]['total_recovered']
-            return coronaData
+                countryItems = jsonResponse[countryDataKey][0]
+
+                for country in countryItems.keys():
+                    if country != 'stat':
+                        countryTitle = countryItems[country]['title']
+                        self.countryCovidDict[countryTitle] = countryItems[country]
         except Exception as ex:
             print(ex)
-        # text = json.dumps(respone.json(), sort_keys=True, indent=4)
-        # print(text)
+
+    def getCountryResult(self, country):
+        coronaData = ['N/A', 'N/A', 'N/A', 'N/A']
+        if country in self.countryCovidDict:
+            coronaData[0] = self.countryCovidDict[country]['total_cases']
+            coronaData[1] = self.countryCovidDict[country]['total_deaths']
+            coronaData[2] = self.countryCovidDict[country]['total_recovered']
+            coronaData[3] = self.countryCovidDict[country]['source']
+        return coronaData

@@ -18,12 +18,14 @@ class CoronaMap:
                       <li>Cases: {}</li>
                       <li>Death: {}</li>
                       <li>Recovered: {}</li>
+                      <li>More info: <a href="{}" target="_blank">{}</a></li>
                     </ul>
                <h5>News Articles:</h5>{}<br/>'''.format(countryName, coronaData[0], coronaData[1], coronaData[2],
+                                                        coronaData[3], coronaData[3],
                                                         articleListHtml)
 
-        iframe = IFrame(html, width=300 + 200, height=300 + 20)
-        popup = folium.Popup(iframe, max_width=650)
+        iframe = IFrame(html, width=250, height=250)
+        popup = folium.Popup(iframe, max_width=250)
         icon = folium.Icon(color="black", icon="heartbeat", icon_color='white', prefix='fa')
         tooltip = 'Click to view more about: ' + countryName
         location = [lat, long]

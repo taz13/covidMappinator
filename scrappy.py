@@ -29,7 +29,7 @@ start_time = timeit.default_timer()
 print("Time starts now: ")
 for country in countryLatLongMap.keys():
     print("\"" + country + "\" : " + countryLatLongMap[country])
-    coronaData = dataApi.getCountryResult(countryApiCodeMap[country])
+    coronaData = dataApi.getCountryResult(country)
     googleSearch.searchWithKeyWord("covid-19 coronavirus " + country)
     (latitude, longitude) = countryLatLongMap[country].split(",")
     coronaMap.addToMap(country, float(latitude), float(longitude), googleSearch.searchResult, coronaData)

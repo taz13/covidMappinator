@@ -20,7 +20,7 @@ class GoogleSearch:
                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.1 Safari/537.36",
                "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36",
                )
-        for url in search(query, tld="com", num=6, start=0, stop=7, pause=3):
+        for url in search(query, tld="com", num=6, start=0, stop=6, pause=3):
             ua = UAS[random.randrange(len(UAS))]
             headers = {'user-agent': ua}
 
